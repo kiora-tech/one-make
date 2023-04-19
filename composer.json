@@ -1,0 +1,15 @@
+{
+    "name": "kiora/one-make",
+    "description": "Makefile templates for easy project setup and management",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Rathgeber Stéphane",
+        "email": "contact@kiora.tech"
+      }
+    ],
+    "require": {},
+    "bin": "install.sh"    
+  }
+  
