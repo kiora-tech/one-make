@@ -13,3 +13,5 @@ load-external-db: load-db ## Load database from external server
 
 vendor: composer.lock
 	${PHP} composer install
+
+.PHONY: install_symfony load-external-db
