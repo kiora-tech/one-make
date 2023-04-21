@@ -1,5 +1,5 @@
 DOCKER_CMD = DOCKER_BUILDKIT=0 docker
-PHP = docker compose exec -T php
+PHP = docker compose exec -it php
 
 
 ##@ Docker

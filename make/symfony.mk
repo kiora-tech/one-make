@@ -2,8 +2,8 @@
 ##@ Symfony
 install_symfony: vendor ## install symfony
 	${PHP} bin/console doctrine:database:create --if-not-exists
-	if [ -f "src/Migrations/Version*.php" ]; then ${PHP} bin/console doctrine:migrations:diff --no-interaction; fi
-	if [ -f "src/DataFixtures/AppFixtures.php" ]; then ${PHP} bin/console doctrine:fixtures:load --no-interaction; fi
+	if [ -f "src/Migrations/Version*.php" ]; then ${PHP} bin/console doctrine:migrations:migrate --no-interaction; fi
+	if [ -f "src/DataFixtures/*.php" ]; then ${PHP} bin/console doctrine:fixtures:load --no-interaction; fi
 
 load-external-db: load-db ## Load database from external server
 	$(PHP) bin/console doctrine:database:drop --force
