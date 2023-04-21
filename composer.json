@@ -10,6 +10,6 @@
       }
     ],
     "require": {},
-    "bin": "install.sh"    
+    "bin": "one-make.sh"    
   }
   

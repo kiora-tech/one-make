@@ -33,7 +33,7 @@ composer require kiora/one-make
 2. Run the installation script:
 
 ```sh
-vendor/bin/install.sh
+vendor/bin/one-make.sh
 ```  
 
 The script will guide you through the process of setting up your Makefile. Follow the prompts, and soon your Makefile shall be ready to serve!
