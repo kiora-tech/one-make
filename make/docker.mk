@@ -1,6 +1,6 @@
 DOCKER_CMD = DOCKER_BUILDKIT=0 docker
 PHP = docker compose exec -it php
-
+JS_DEP = docker compose run --rm node yarn
 
 ##@ Docker
 init: ## init docker

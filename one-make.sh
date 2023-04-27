@@ -79,6 +79,12 @@ if grep -q "\"phpunit/phpunit\"" "$PROJECT_ROOT/composer.json" && \
   echo "include $ONE_MAKE_PATH/test.mk" >> "$PROJECT_ROOT/Makefile"
 fi
 
+
+if [ -f "$PROJECT_ROOT/package.json" ] && \
+   ! grep -q "include $ONE_MAKE_PATH/node.mk" "$PROJECT_ROOT/Makefile"; then
+  echo "include $ONE_MAKE_PATH/node.mk" >> "$PROJECT_ROOT/Makefile"
+fi
+
 echo ".DEFAULT_GOAL:=help" >> "$PROJECT_ROOT/Makefile"
 
 echo "Makefile généré avec succès !"
