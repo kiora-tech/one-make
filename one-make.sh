@@ -47,7 +47,6 @@ else
 fi
 
 
-
 # Check if Docker is being used
 if [ -f "$PROJECT_ROOT/Dockerfile" ] || [ -f "$PROJECT_ROOT/docker-compose.yml" ]; then
   cp -n "$ONE_MAKE_PATH/docker.mk" "$LOCAL_MAKE_PATH/"
