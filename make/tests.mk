@@ -8,7 +8,7 @@ test: ## Run PHPUnit tests
 
 # Run a specific testsuite
 test-%: ## Run a specific PHPUnit testsuite (e.g., make test-<suite_name>)
-	$(if $(filter before-test-$*,$(MAKECMDGOALS)),,make before-test-$* || true)
+	$(if $(shell $(MAKE) -n before-test-$* 2> /dev/null),$(MAKE) before-test-$*,)
 	$(PHP) $(PHPUNIT) --testsuite $*
 
 # Add this line to your Makefile to define a before-test-<suite_name> target
