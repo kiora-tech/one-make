@@ -13,3 +13,8 @@ node_modules: yarn.lock
 
 yarn.lock: package.json
 	$(JS_DEP) install
+
+build: public/build ## Build assets
+
+public/build: assets/*
+	$(JS_DEP) build
