@@ -16,5 +16,5 @@ yarn.lock: package.json
 
 build: public/build ## Build assets
 
-public/build: assets/*
+public/build: assets/* assets/*/*
 	$(JS_DEP) build
