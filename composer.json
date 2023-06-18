@@ -10,6 +10,10 @@
       }
     ],
     "require": {},
-    "bin": "one-make.sh"    
+    "bin": "one-make.sh",   
+    "scripts": {
+      "post-update-cmd": "vendor/kiora/one-make/one-make-update.sh",
+      "post-install-cmd": "vendor/kiora/one-make/one-make-update.sh"
+  } 
   }
   

@@ -16,7 +16,7 @@ $(DOCKER_SENTINELS): make/.%.sentinel : $(DOCKERFILES_FOLDER)/Dockerfile.%
 
 up: init ## run docker
 
-.PHONY: init up
-
 php: up ## run php container
 	${DOCKER_CMD} compose exec php bash
+
+.PHONY: init up php

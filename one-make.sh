@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# Determine the path to the project root
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
-PROJECT_ROOT="$SCRIPT_DIR/../../.."
-ONE_MAKE_PATH="vendor/kiora/one-make/make"
-LOCAL_MAKE_PATH="$PROJECT_ROOT/make"
+source one-make-common.sh
+
+create_make_dir
 
 # Function to get user input
 get_user_input() {
@@ -25,10 +23,6 @@ get_user_input() {
 }
 
 
-# Create the 'make' directory if it doesn't exist
-if [ ! -d "$LOCAL_MAKE_PATH" ]; then
-  mkdir "$LOCAL_MAKE_PATH"
-fi
 
 if [ -f "$LOCAL_MAKE_PATH/one-make.mk" ]; then
     echo "The required information is already present in the Makefile."
